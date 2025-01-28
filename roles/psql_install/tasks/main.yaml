@@ -1,0 +1,14 @@
+---
+- name: Get IP of the current node
+  ansible.builtin.set_fact:
+    tpa_single_node_pg_db: "{{ ansible_ssh_host }}"
+
+- name: Set a variable about Rhel
+  ansible.builtin.set_fact:
+    rhel: false
+
+- name: Configure infra dependencies
+  ansible.builtin.include_tasks: psql.yaml
+  args:
+    apply:
+      become: true

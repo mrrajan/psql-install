@@ -1,0 +1,11 @@
+---
+trustification:
+  vars:
+    ansible_ssh_private_key_file: # Location to the private keys
+  children:
+    rhel:
+      hosts:
+        slaves-ansible:
+          ansible_host: # IP address of the VM
+      vars:
+        ansible_ssh_user: # User name for SSH

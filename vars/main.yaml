@@ -1,0 +1,13 @@
+---
+# Vars for PSQL
+tpa_single_node_pg_user: guac  # PSQL user name 
+tpa_single_node_pg_user_passwd: guac1234 # PSQL user password
+
+# defaults file for tpa_single_node
+tpa_single_node_system_packages:
+  - podman
+  - podman-plugins
+  - postgresql
+  - postgresql-server
+  - python3-pip
+  - python3-cryptography
